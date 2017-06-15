@@ -1,22 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>HTML5 Canvas</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/animate.css">
-  
+    <meta charset="UTF-8">
+    <title>HTML5 Canvas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/semantic.css">
+
 </head>
+
 <body>
 
-<h1 class="animated pulse">CLICK AND DRAG!</h1>
-<p> DOUBLE CLICK TO CLEAR YOUR CANVAS!</p>
-<div>
-    <audio controls autoplay loop="audio-example">    <source src="/sounds/skrill.mp3">     You will see this text if native audio playback is not supported. </audio>
-</div>
+    <h1 class="animated pulse">CLICK AND DRAG TO FEEL THE WUB WUB!</h1>
+    <p class="animated bounce"> DOUBLE CLICK TO CLEAR YOUR CANVAS!</p>
 
-<canvas id="draw" width="800" height="800"></canvas>
+    <div class="ui fluid six borderless menu">
+        <div class="ui stackable four column grid">
 
-<script src="js/scripts.js"></script>
+                <div class="item"> Change Shape:</div>
+                <div class="item">
+                    <select name="lineCap" id="lineCap">
+                        <option value="round">Circle</option>
+                        <option value="butt">Cross</option>
+                        <option value="square">Square</option>
+                    </select>
+                </div>
+
+
+                <div class="item"> Change Composition: </div>
+                <div class="item">
+                    <select name="globalComp" id="globalComp">
+                        <option value="source-over">Hue-Fill</option>
+                        <option value="xor">No-fill</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+    <main class="ui grid">
+
+        <div class="audio">
+            <audio controls autoplay loop="audio-example">
+                <source src="/sounds/skrill.mp3">You will see this text if native audio playback is not supported.</audio>
+        </div>
+
+        <canvas id="draw" width="800" height="800"></canvas>
+
+        <script src="js/scripts.js"></script>
+        <script src="js/semantic.js"></script>
 </body>
-    
